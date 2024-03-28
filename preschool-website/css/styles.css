@@ -1,0 +1,151 @@
+
+* {
+    box-sizing: border-box;
+  }
+  /* body */
+  body {
+    font-family: cursive;
+    max-width: 1100px;
+    margin:auto;
+    background-color: azure;
+  }
+  #bg_img{ 
+    width: -webkit-fill-available;
+    height: 300px;
+  }
+  .tit_name {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .tit_name h1{
+    font-family: cursive;
+    font-size: 38px;
+  }
+  .navbar table{
+    width: -webkit-fill-available;
+    margin: 20px;
+  }
+  .navbar table tr th a{
+    text-decoration: none;
+    color:#d70909a1;
+    font-size: 25px;
+    font-weight: lighter;
+  }
+  .navbar table tr th:hover a{
+    color: rgb(232 49 15);
+  }
+  .main_container{
+    display: flex;
+  }
+  .sch_facits{
+    flex: 80%;
+  }
+  .abt_sch{
+    flex: 20%;
+    border: 1px solid cadetblue;
+    border-radius: 10%;
+  }
+  .sch_facits h1{
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
+    color:#e8279dc4;
+  }
+  .sch_facits table{
+    width:100%;
+  }
+  .sch_facits table td{
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+  }
+  .sch_facits p{
+    font-size: smaller;
+  }
+  #sch_bus , #sch_pg , #sch_hc , #sch_pl {
+    border-radius: 100%;
+    height: 310px;
+  }
+  #sch_bus article , #sch_pg article , #sch_hc article ,#sch_pl article {
+    text-wrap: balance;
+  }
+  #sch_bus{
+    background-color: #FFF5F3;
+    border: 1px solid #FE5D37;
+  }
+  #sch_pg {
+    background-color: #c1dad33d;
+    border: 1px solid #198754;
+  }
+  #sch_hc {
+    background-color: #edc13b1c;
+    border: 1px solid #f1bc1d;
+  }
+  #sch_pl {
+    background-color: #43cae51c;
+    border: 1px solid #1dbcf1;
+  }
+  .abt_sch div {
+    font-size: x-large;
+    text-align: center;
+  }
+  .abt_sch div h1{
+    color: #edc13b8c;
+  }
+  .sch_c , .sch_t , .sch_r{
+    height: 100px;
+    padding: 13px;
+  }
+  .sch_c a{
+    color: forestgreen;
+  }
+  .sch_t a{
+    color: deeppink;
+  }
+  .sch_r a{
+    color: darkblue;
+  }
+  .sch_photo {
+    display: flex;
+  }
+  .sch_photo .img_1 , .sch_photo .img_2{
+    flex: 25%;
+    text-align: center;
+  }
+  .sch_photo .img_1 img , .sch_photo .img_2 img{
+    width: 80%;
+    height: 200px;
+  }
+  .footer {
+    padding: 20px;
+    text-align: center;
+  }
+  .footer p{
+    color:rgb(53, 99, 226);
+  }
+  /* about.html CSS */
+  .abt_header {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+    height: 350px;
+  }
+  .abt_header::before, .abt_header::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-header-top.png) repeat-x;
+}
+.abt_header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  top: 0;
+  left: 0;
+  background: url(../img/bg-header-bottom.png) repeat-x;
+}
+  

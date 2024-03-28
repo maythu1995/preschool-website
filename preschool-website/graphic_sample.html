@@ -1,0 +1,94 @@
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<svg width="250" height="120">
+    <rect x="5" y="5" width="200" height="100" stroke="red" stroke-width="1" fill="blue" />
+</svg>
+
+<svg width="250" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+<svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+    style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+<svg height="130" width="500">
+    <defs>
+      <linearGradient id="grad1">
+        <stop offset="30%" stop-color="yellow" />
+        <stop offset="100%" stop-color="red" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+    Sorry, your browser does not support inline SVG.
+</svg>
+<br><br>
+<canvas id="myCanvas_d" width="200" height="100" style="border:1px solid #d3d3d3;"> </canvas>
+
+<canvas id="myCanvas_c" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+<canvas id="myCanvas_txt" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+<canvas id="myCanvas_lg" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+<canvas id="myCanvas_cg" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+<p>Image to use:</p>
+<img id="scream" src="img/1589961657_89801025.jpg" alt="The Scream" width="220" height="277">
+
+<p>Canvas to fill:</p>
+<canvas id="myCanvas" width="250" height="300"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<p><a href="#" onclick="myCanvas()">Try it</a></p>
+<script>
+    var d       = document.getElementById("myCanvas_d");
+    var ctx_d   = d.getContext("2d");
+    ctx_d.moveTo(0,0);
+    ctx_d.lineTo(200,100);
+    ctx_d.stroke();
+    var c       = document.getElementById("myCanvas_c");
+    var ctx_c   = c.getContext("2d");
+    ctx_c.beginPath();
+    ctx_c.arc(95,50,40,0,2*Math.PI);
+    ctx_c.stroke();
+    var txt      = document.getElementById("myCanvas_txt");
+    var ctx_txt  = txt.getContext("2d");
+    ctx_txt.font = "30px Arial";
+    ctx_txt.fillText("Hello World", 10, 50);
+    var Lg = document.getElementById("myCanvas_lg");
+    var ctx_Lg = Lg.getContext("2d");
+
+    // Create gradient
+    var grd_Lg = ctx_Lg.createLinearGradient(0, 0, 200, 0);
+    grd_Lg.addColorStop(0, "red");
+    grd_Lg.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx_Lg.fillStyle = grd_Lg;
+    ctx_Lg.fillRect(10, 10, 150, 80);
+    var cg = document.getElementById("myCanvas_cg");
+    var ctx_cg = cg.getContext("2d");
+
+    // Create gradient
+    var grd_cg = ctx_cg.createRadialGradient(75, 50, 5, 90, 60, 100);
+    grd_cg.addColorStop(0, "red");
+    grd_cg.addColorStop(1, "white");
+
+    // Fill with gradient
+    ctx_cg.fillStyle = grd_cg;
+    ctx_cg.fillRect(10, 10, 150, 80);
+
+    function myCanvas() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("scream");
+        ctx.drawImage(img,1,1);
+    }
+</script>
