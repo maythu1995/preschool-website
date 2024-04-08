@@ -1,0 +1,58 @@
+<p id = "output"> </p>
+<div id = "demo"> </div>
+<div id = "output2"> </div>
+<script>
+    const output = document.getElementById("output");
+    output.innerHTML = "------------------Starting switch case-------------------- <br>";
+    let grade = 'B';
+    switch (grade) {
+        case 'A': output.innerHTML += "Good job <br />";
+        break;
+        case 'B': output.innerHTML += "Passed <br />";
+        break;
+        case 'C': output.innerHTML += "Failed <br />";
+        break;
+        default: output.innerHTML += "Unknown grade <br />";
+    }
+
+    const output1 = document.getElementById("demo");
+    let i = 1;
+    output1.innerHTML = "-------------Starting while Loop------- <br>";
+    while(i <= 5){
+        output1.innerHTML += i + "<br>";
+      i++;
+    }
+
+    const output2 = document.getElementById("output2");
+    output2.innerHTML = "------------------Starting for Loop-------------------- <br>";
+    let count;
+    for (let count = 0; count < 10; count++) {
+        output2.innerHTML += "Current Count : " + count + "<br/>";
+    }
+    output2.innerHTML += "Loop stopped!";
+
+
+    document.write("<b>-------------if else-------------</b></br>");
+    var age = 15;
+    if( age > 18 ){
+    document.write("<b>Qualifies for driving</b>");
+    }else{
+    document.write("<b>Does not qualify for driving</b>");
+    }
+
+    document.write("</br><b>---------if else if else-------------</b></br>");
+    var book = "maths";
+    if( book == "history" ){
+    document.write("<b>History Book</b>");
+    }
+    else if( book == "maths" ){
+    document.write("<b>Maths Book</b>");
+    }
+    else if( book == "economics" ){
+    document.write("<b>Economics Book</b>");
+    }
+    else{
+    document.write("<b>Unknown Book</b>");
+    }
+
+</script>
